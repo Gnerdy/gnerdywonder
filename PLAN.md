@@ -17,7 +17,7 @@ gnerdywonder/
 ├── js/app.js
 ├── js/buy.js
 ├── images/logo.png (existing)
-└── downloads/.gitkeep (place GnerdyWonderSetup.exe here)
+└── downloads/.gitkeep (installer hosted on GitHub Releases instead)
 
 ## Pricing (GHS)
 | Plan | Price | Devices | Updates | Support |
@@ -41,13 +41,13 @@ Buy Now → buy.html?plan=advanced → Paystack popup → success.html?reference
 Only the **Advanced** plan (GH₵ 1,500.00) is available for purchase. Basic and Perpetual plans are greyed out and not clickable.
 
 ## Software File
-GnerdyWonderSetup.exe (already present in downloads/ folder)
+GnerdyWonderSetup.exe (hosted on GitHub Releases: https://github.com/Gnerdy/gnerdywonder/releases/download/v1.0.0/GnerdyWonderSetup.exe)
 
 ## Support Email
 support@gnerdyresearchconsortium.com
 
 ## Software File
-GnerdyWonderSetup.exe (place in downloads/ folder)
+GnerdyWonderSetup.exe (hosted on GitHub Releases)
 
 ## Notes
 - Test keys active — no real money charged.
