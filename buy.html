@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout — Purchase Gnerdywonder Software with Paystack (GHS)">
+    <meta name="author" content="Gnerdy Research Consortium">
+    <link rel="shortcut icon" href="images/logo.png">
+    <title>Checkout | Gnerdywonder Software</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Gnerdywonder Logo" onerror="this.style.display='none'">
+                <span>Gnerdywonder</span>
+            </a>
+            <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation">☰</button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== BUY HEADER ===== -->
+    <section class="buy-header">
+        <div class="container">
+            <div class="buy-badge">🇬🇭 Secure Payment via Paystack</div>
+            <h1 class="buy-title">Complete Your Purchase</h1>
+            <p class="buy-subtitle">Enter your email and pay securely with Mobile Money, Card, or Bank Transfer. Price in Ghana Cedis (GHS).</p>
+        </div>
+    </section>
+
+    <!-- ===== BUY CONTENT ===== -->
+    <section class="buy-content">
+        <div class="container">
+            <div class="buy-layout">
+
+                <!-- Left: Plan Summary -->
+                <div class="plan-summary">
+                    <div class="plan-header-row">
+                        <h3 id="planName">Advanced</h3>
+                        <span class="plan-summary-price" id="planPrice">GH₵ 1,500.00</span>
+                    </div>
+                    <ul>
+                        <li><span class="check">✓</span> <span id="planDevices">3 devices</span></li>
+                        <li><span class="check">✓</span> <span id="planUpdates">1 year updates</span></li>
+                        <li><span class="check">✓</span> <span id="planSupport">Priority support</span></li>
+                    </ul>
+                    <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: var(--text-secondary);">Subtotal</span>
+                            <span id="planPriceSmall" style="font-weight: 600; color: var(--text-primary);">GH₵ 1,500.00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">Tax</span>
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">GH₵ 0.00</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Payment Form -->
+                <div class="payment-card">
+                    <h3>Secure Checkout</h3>
+
+                    <form id="checkoutForm">
+                        <!-- Error message -->
+                        <div id="errorMsg" style="display: none; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 20px;"></div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Your receipt will be sent here.</div>
+                        </div>
+
+                        <div class="payment-methods">
+                            <h4>Payment Method</h4>
+                            <div class="method-option selected">
+                                <input type="radio" name="paymentMethod" value="card" checked>
+                                <label>Credit / Debit Card (Visa, Mastercard, Verve)</label>
+                            </div>
+                            <div class="method-option">
+                                <input type="radio" name="paymentMethod" value="bank">
+                                <label>Bank Transfer (Paystack generates account)</label>
+                            </div>
+                            <div class="method-option">
+                                <input type="radio" name="paymentMethod" value="momo">
+                                <label>Mobile Money (MTN, Vodafone, AirtelTigo Ghana)</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="payBtn" class="btn-pay">
+                            <span id="payBtnText">Pay with Paystack</span>
+                            <div id="paySpinner" class="spinner" style="display: none;"></div>
+                        </button>
+
+                        <div class="security-info">
+                            <div class="security-row">
+                                <span class="security-icon">🔒</span>
+                                <span>PCI-DSS compliant payment processing</span>
+                            </div>
+                            <div class="security-row">
+                                <span class="security-icon">🇬🇭</span>
+                                <span>Prices in Ghana Cedis (GHS)</span>
+                            </div>
+                            <div class="security-row">
+                                <span class="security-icon">📧</span>
+                                <span>Receipt sent to your email</span>
+                            </div>
+                        </div>
+
+                        <div class="note-box">
+                            <span class="note-icon">ℹ️</span>
+                            Selecting <strong>Mobile Money</strong> will prompt you to enter your phone number. You'll receive a USSD code on your phone to authorize the payment.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Gnerdywonder Logo" onerror="this.style.display='none'">
+                    <p>Secure payments powered by Paystack.</p>
+                </div>
+                <div class="footer-contact">
+                    <h5>Need Help?</h5>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:support@gnerdyresearchconsortium.com">support@gnerdyresearchconsortium.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Gnerdy Research Consortium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="js/buy.js"></script>
+</body>
+</html>

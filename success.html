@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Payment Successful — Download Gnerdywonder Software">
+    <meta name="author" content="Gnerdy Research Consortium">
+    <link rel="shortcut icon" href="images/logo.png">
+    <title>Payment Successful | Gnerdywonder Software</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Gnerdywonder Logo" onerror="this.style.display='none'">
+                <span>Gnerdywonder</span>
+            </a>
+            <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation">☰</button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== SUCCESS PAGE ===== -->
+    <section class="result-page">
+        <div class="container">
+            <div class="result-icon">✅</div>
+            <h1 class="result-title">Payment Successful!</h1>
+            <p class="result-message">Thank you for your purchase. Your software download is ready below.</p>
+
+            <div class="result-details" id="resultDetails">
+                <div class="detail-row">
+                    <span class="detail-label">Transaction Reference</span>
+                    <span class="detail-value" id="txReference">—</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Plan</span>
+                    <span class="detail-value" id="txPlan">—</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Amount</span>
+                    <span class="detail-value" id="txAmount">—</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Status</span>
+                    <span class="detail-value" style="color: #10b981;">Paid</span>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <a href="downloads/GnerdyWonderSetup.exe" class="btn btn-primary btn-download" id="downloadBtn">
+                    ⬇ Download GnerdyWonderSetup.exe
+                </a>
+                <div class="file-info">File: GnerdyWonderSetup.exe • Direct download link</div>
+            </div>
+
+            <p style="margin-top: 32px; color: var(--text-secondary); font-size: 0.9rem;">
+                Having trouble downloading? Email us at <a href="mailto:support@gnerdyresearchconsortium.com" style="color: var(--primary);">support@gnerdyresearchconsortium.com</a>
+            </p>
+
+            <a href="index.html" class="btn btn-outline" style="margin-top: 20px;">Return to Home</a>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const reference = urlParams.get('reference');
+        const plan = urlParams.get('plan');
+
+        if (reference) {
+            document.getElementById('txReference').textContent = reference;
+        }
+        if (plan) {
+            const planNames = { basic: 'Basic', advanced: 'Advanced', perpetual: 'Perpetual' };
+            document.getElementById('txPlan').textContent = planNames[plan] || plan;
+        }
+
+        const amounts = { basic: 'GH₵ 1,000.00', advanced: 'GH₵ 1,500.00', perpetual: 'GH₵ 2,500.00' };
+        if (plan && amounts[plan]) {
+            document.getElementById('txAmount').textContent = amounts[plan];
+        }
+    });
+    </script>
+</body>
+</html>
