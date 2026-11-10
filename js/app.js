@@ -98,6 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const card = this.closest('.pricing-card');
             if (!card) return;
 
+            // Only Advanced is clickable — Basic and Perpetual are disabled
+            if (card.classList.contains('disabled') || this.classList.contains('disabled')) {
+                return;
+            }
+
             const planName = card.querySelector('.plan-name').textContent.trim().toLowerCase();
             let planKey = '';
 

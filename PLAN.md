@@ -26,16 +26,22 @@ gnerdywonder/
 | Advanced | 1,500.00 GHS | 3 devices | 1 year | Priority |
 | Perpetual | 2,500.00 GHS | 5 devices | Lifetime | Lifetime |
 
-## Paystack (Test Mode)
-- Public Key: pk_test_9bea51e2bf65da4ca28f1128cb485f7f554c150b
-- Secret Key: sk_test_540b43c45974188bd3996bfe1f1cb363ab11fab3 (not used client-side)
+## Paystack (Live Mode)
+- Public Key: <set in environment / Paystack dashboard>
+- Secret Key: <set in environment — not used client-side>
 - Currency: GHS
 
 ## Payment Methods
 Card (Visa, Mastercard, Verve), Bank Transfer, Mobile Money (MTN, Vodafone, AirtelTigo Ghana), USSD, QR
 
 ## Post-Payment Flow
-Buy Now → buy.html?plan=x → Paystack popup → success.html?reference=XXX&plan=x → direct download of GnerdyWonderSetup.exe
+Buy Now → buy.html?plan=advanced → Paystack popup → success.html?reference=XXX&plan=advanced → direct download of GnerdyWonderSetup.exe
+
+## Available Plan
+Only the **Advanced** plan (GH₵ 1,500.00) is available for purchase. Basic and Perpetual plans are greyed out and not clickable.
+
+## Software File
+GnerdyWonderSetup.exe (already present in downloads/ folder)
 
 ## Support Email
 support@gnerdyresearchconsortium.com

@@ -2,8 +2,8 @@
 // Gnerdywonder Checkout — Paystack InlineJS
 // =========================================
 
-// Paystack configuration (TEST MODE — switch to live key for production)
-const PAYSTACK_PUBLIC_KEY = 'pk_test_9bea51e2bf65da4ca28f1128cb485f7f554c150b';
+// Paystack configuration (LIVE MODE)
+const PAYSTACK_PUBLIC_KEY = 'pk_live_3feba995c16d539ff6d43a4f1dda9fc00bc6ac5a';
 
 // Plan configuration (GHS — amounts in pesewas: 1 GHS = 100 pesewas)
 const PLANS = {

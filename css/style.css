@@ -1107,6 +1107,54 @@ body {
     color: var(--primary);
 }
 
+/* ===== DISABLED PRICING CARDS ===== */
+.pricing-card.disabled {
+    opacity: 0.6;
+    filter: grayscale(60%);
+    border-color: var(--border-color);
+    pointer-events: none;
+    transform: none !important;
+    background: var(--bg-card);
+}
+
+.pricing-card.disabled:hover {
+    border-color: var(--border-color);
+    transform: none !important;
+    box-shadow: none;
+}
+
+.pricing-card.disabled .popular-badge {
+    display: none;
+}
+
+.btn-buy.disabled {
+    background: var(--border-color);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-buy.disabled:hover {
+    background: var(--border-color);
+    color: var(--text-muted);
+    transform: none;
+    box-shadow: none;
+}
+
+.pricing-card.disabled .plan-name,
+.pricing-card.disabled .plan-price,
+.pricing-card.disabled .plan-description,
+.pricing-card.disabled .plan-features li {
+    color: var(--text-muted);
+}
+
+.pricing-card.disabled .plan-features li .check {
+    color: var(--text-muted);
+}
+
+.pricing-card.disabled .plan-features li .cross {
+    color: var(--text-muted);
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .navbar-toggler {
@@ -1219,4 +1267,24 @@ body {
     .buy-layout {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== ENFORCE GREY DISABLED BUTTONS ===== */
+.btn-buy.disabled,
+.btn-buy[disabled] {
+    background: #64748b !important;
+    color: #94a3b8 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.btn-buy.disabled:hover,
+.btn-buy[disabled]:hover {
+    background: #64748b !important;
+    color: #94a3b8 !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
